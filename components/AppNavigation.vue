@@ -49,7 +49,14 @@ export default {};
 </script> 
 
 <style scoped>
-/*  TOP MENU */
+/* home route and active route will show in bold as it matches / and /about */
+a.nuxt-link-active {
+  background: url(/i/menubg.png) no-repeat #dfdfdf;
+  border-bottom: 1px solid #dfdfdf;
+  background-position: center;
+  color: #434343 !important;
+  text-shadow: 1px 1px #fbfbfb;
+}
 
 .list {
   margin: 0;
@@ -99,8 +106,8 @@ export default {};
 }
 
 .engLang:hover {
-  background: #fbfbfb;
   cursor: pointer;
+  background: #fbfbfb;
   color: #333333;
 }
 .engLang:hover a {

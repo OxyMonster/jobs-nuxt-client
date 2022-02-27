@@ -29,6 +29,9 @@
               </div>
             </div>
             <a-row :gutter="[16, 16]" type="flex" justify="space-between">
+              <a-col :span="24">
+                <Companies />
+              </a-col>
               <a-col :span="activeView">
                 <div class="mb-3">
                   <JobListItem :activeView="activeView" />

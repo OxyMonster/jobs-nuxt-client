@@ -3,14 +3,18 @@
   <div class="app">
     <div class="app__header">
       <a-row>
-        <a-col :span="24">
-          <AppHeader />
-        </a-col>
-        <a-col :span="24">
-          <div class="mb-3">
-            <AppNavigation />
-          </div>
-        </a-col>
+        <div class="">
+          <a-col :span="24">
+            <AppHeader />
+          </a-col>
+        </div>
+        <div class="w-100">
+          <a-col :span="24">
+            <div class="mb-3 w-100">
+              <AppNavigation />
+            </div>
+          </a-col>
+        </div>
         <a-col :span="24">
           <div class="container">
             <Nuxt />
@@ -31,5 +35,11 @@ export default {
 .header {
   background-color: white;
   height: 90px;
+}
+
+.sticky {
+  position: sticky;
+  z-index: 3;
+  top: 0;
 }
 </style>
