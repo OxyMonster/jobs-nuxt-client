@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://i.pinimg.com/originals/9c/a2/8f/9ca28f66c51578cb9e746d648dd3344f.gif" alt="logo">
+</p>
+
 # jobs-place-client
 
 ## Build Setup
