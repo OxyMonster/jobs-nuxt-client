@@ -5,7 +5,7 @@ module.exports = {
     banner: 'banner',
     contact: 'contact',
     employType: 'Type of employment',
-    seniorLevel: 'Seniority Level',
+    seniorityLevel: 'Seniority Level',
     salaryRange: "Salary range",
     fullTime: "Fulltime jobs",
     partTIme: "Part time jobs",
@@ -18,6 +18,11 @@ module.exports = {
     seniorLevel: "Senior Level",
     dirctorLevel: "Director Level",
     vipOrAbove: "VIP or Above",
-    currency: '$'
+    currency: '$',
+    // BUTTONS
+    buttons: {
+        search: 'Search',
+        readMore: 'Read More'
+    }
 
 }

@@ -1,6 +1,6 @@
 <template>
   <div class="item">
-    <a-row tyoe="flex" justify="space-between">
+    <a-row type="flex" justify="space-between">
       <a-col :md="{ span: logoCol }" :sm="{ span: 24 }">
         <div class="avatar">
           <img src="../assets/img/airbnb-logo.png" alt="" />
@@ -31,13 +31,15 @@
         </div>
       </a-col>
       <a-col :md="{ span: buttonCol }" :sm="{ span: 24 }">
-        <div class="flex justify-end">
-          <a-button>
-            <a-icon type="heart" />
-          </a-button>
-        </div>
-        <div class="flex justify-end mt-2">
-          <a-button type="primary">Read more</a-button>
+        <div class="buttons-block">
+          <div class="flex justify-end">
+            <a-button>
+              <a-icon type="heart" />
+            </a-button>
+          </div>
+          <div class="flex justify-end mt-2">
+            <a-button type="primary"> {{ $t("buttons.readMore") }} </a-button>
+          </div>
         </div>
       </a-col>
     </a-row>
@@ -77,6 +79,13 @@ export default {
 </script>
 
 <style>
+.buttons-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  widows: 100%;
+}
 .item {
   background-color: white;
   border-radius: 8px;

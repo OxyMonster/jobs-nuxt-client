@@ -33,7 +33,9 @@
       </a-row>
     </div>
     <div class="bottom-filter">
-      <a-button class="filter-button" type="primary">FIND JOBS</a-button>
+      <a-button class="filter-button" type="primary">
+        {{ $t("buttons.search") }}
+      </a-button>
     </div>
   </div>
 </template>

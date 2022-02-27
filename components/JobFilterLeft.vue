@@ -7,7 +7,7 @@
       style="height: 100%"
     >
       <a-sub-menu key="sub1">
-        <span slot="title"><a-icon type="user" />Type of employment</span>
+        <span slot="title"><a-icon type="user" /> {{ $t("employType") }} </span>
         <a-menu-item key="1" class="flex justify-between">
           <a-checkbox> Full time Jobs </a-checkbox>
           <a-tag>123</a-tag>
@@ -34,7 +34,9 @@
         </a-menu-item>
       </a-sub-menu>
       <a-sub-menu key="sub2">
-        <span slot="title"><a-icon type="laptop" />Seniority level</span>
+        <span slot="title"
+          ><a-icon type="laptop" />{{ $t("seniorityLevel") }}</span
+        >
         <a-menu-item key="7" class="flex justify-between">
           <a-checkbox> Entry Level </a-checkbox>
           <a-tag>123</a-tag>
@@ -57,7 +59,9 @@
         </a-menu-item>
       </a-sub-menu>
       <a-sub-menu key="sub3">
-        <span slot="title"><a-icon type="notification" />Salary range</span>
+        <span slot="title"
+          ><a-icon type="notification" />{{ $t("salaryRange") }}</span
+        >
         <a-menu-item key="12" class="flex justify-between">
           <a-checkbox> $700 - $1000 </a-checkbox>
           <a-tag>123</a-tag>

@@ -28,4 +28,8 @@ export default {
 </script>
 
 <style>
+.header {
+  background-color: white;
+  height: 90px;
+}
 </style>

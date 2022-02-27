@@ -4,9 +4,9 @@ module.exports = {
     about: 'ჩვენს შესახებ',
     banner: 'ბანერი',
     contact: 'კონტაქტი',
-    employType: 'Type of employment',
-    seniorLevel: 'Seniority Level',
-    salaryRange: "Salary range",
+    employType: 'დასაქმების ტიპები',
+    seniorityLevel: 'პოზიციის დონე',
+    salaryRange: "სახელფასო დიაპაზონი",
     fullTime: "Fulltime jobs",
     partTIme: "Part time jobs",
     remote: "Remote jobs",
@@ -18,5 +18,9 @@ module.exports = {
     seniorLevel: "Senior Level",
     dirctorLevel: "Director Level",
     vipOrAbove: "VIP or Above",
-    currency: '$'
+    currency: '$',
+    buttons: {
+        search: 'ძებნა',
+        readMore: 'ნახვა'
+    }
 }

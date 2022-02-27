@@ -135,10 +135,10 @@
   
   body {
     filter: blur(111);
-      background-repeat: no-repeat;
-      background-size: cover;
-      font-family: "BPG Mrgvlovani", sans-serif;
-
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "BPG Mrgvlovani", sans-serif;
+    background-color: #EDF1F6;
 
   }
 
