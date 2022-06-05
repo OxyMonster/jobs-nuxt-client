@@ -4,10 +4,7 @@
   </svg> -->
   <div class="flex align-center">
     <div class="logo">
-      <img
-        src="https://bootstraplogos.com/wp-content/uploads/edd/2018/08/logo-5.png"
-        alt=""
-      />
+      <img src="https://www.antdv.com/assets/logo.1ef800a8.svg" alt="" />
     </div>
     <div class="">
       <div class="slogan">&nbsp;</div>

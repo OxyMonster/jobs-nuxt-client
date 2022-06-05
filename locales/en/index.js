@@ -19,10 +19,18 @@ module.exports = {
     dirctorLevel: "Director Level",
     vipOrAbove: "VIP or Above",
     currency: '$',
+    city: 'City',
+    category: 'Category',
+    selectCity: 'select city ...',
+    searchWDots: 'Search ...',
     // BUTTONS
     buttons: {
         search: 'Search',
         readMore: 'Read More'
-    }
+    },
+    companies: 'companies',
+    blog: 'blog',
+    login: 'Login',
+    register: 'register'
 
 }

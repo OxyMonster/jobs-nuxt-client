@@ -19,8 +19,16 @@ module.exports = {
     dirctorLevel: "Director Level",
     vipOrAbove: "VIP or Above",
     currency: '$',
+    city: 'ქალაქი',
+    category: 'კატეგორია',
+    selectCity: 'ქალაქი',
+    searchWDots: 'ძებნა ...',
     buttons: {
         search: 'ძებნა',
         readMore: 'ნახვა'
-    }
+    },
+    companies: 'კომპანიები',
+    blog: 'ბლოგი',
+    login: 'ავტორიზაცია',
+    register: 'რეგისტრაცია'
 }

@@ -2,21 +2,24 @@
   <div class="">
     <a-row :gutter="[16]" type="flex" justify="space-between">
       <a-col
-        v-for="item in companies"
-        :key="item._id"
+        v-for="i in [1, 2, 3, 4, 5, 6, 7, 8]"
+        :key="i"
         :md="{ span: 6 }"
         :sm="{ span: 24 }"
       >
         <div class="client_box shadow">
           <div class="company-logo-wrapper">
-            <img class="company-logo" :src="item.avatarUrl" alt="" />
+            <!-- <img class="company-logo" alt="" /> -->
+            <div class="company-logo center">
+              <a-spin />
+            </div>
           </div>
           <div class="see-all-vacancy">
             <!-- <a-button :size="'small'">
              
             </a-button> -->
-            <nuxt-link class="h-100 ss" :to="'/company/' + item._id"
-              >ყველა ვაკანსი</nuxt-link
+            <a href="?view=client&amp;client=nova-co" class="ss"
+              >ყველა ვაკანსია</a
             >
           </div>
         </div>
@@ -27,12 +30,15 @@
 
 <script>
 export default {
-  name: "Companies",
-  props: ["companies"],
+  name: "CompaniesSkeleton",
 };
 </script>
 
 <style>
+.center {
+  display: flex;
+  justify-content: center;
+}
 .client_box {
   background-color: white;
   /* width: 170px; */
@@ -65,6 +71,5 @@ export default {
   font-size: 12px !important;
   color: #1890ff !important;
   text-decoration: none;
-  font-weight: bolder;
 }
 </style>

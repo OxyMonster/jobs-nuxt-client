@@ -7,6 +7,7 @@
 <script>
 export default {
   name: "IndexPage",
-  layout: "DefaultLayout",
+  middleware: "routerMiddlware",
+  layout: "Default",
 };
 </script>

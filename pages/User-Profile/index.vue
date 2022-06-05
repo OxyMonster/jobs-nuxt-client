@@ -1,14 +1,14 @@
 <template>
-  <div class="page shadow">
-    <LazyContact />
+  <div class="">
+    <h1>hello</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Contact",
+  layout: "userProfile",
 };
 </script>
-  
+
 <style>
 </style>

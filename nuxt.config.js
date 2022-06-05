@@ -8,12 +8,16 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { hid: 'description', name: 'description', content: 'description' },
+      { name: 'format-detection', content: 'telephone=599123270' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
+  },
+  loading: {
+    color: '#2388e5',
+    height: '5px'
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -27,7 +31,10 @@ export default {
   plugins: [
     '@/plugins/antd-ui'
   ],
-
+  router: {
+    prefetchLinks: true,
+    default: 'jobs/list'
+  },
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
@@ -37,9 +44,14 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    '@nuxtjs/i18n'
+    '@nuxtjs/i18n',
+    '@nuxtjs/axios',
+    ['@nuxtjs/dotenv', { filename: '.env' }],
   ],
 
+  axios: {
+    proxy: true
+  },
   i18n: {
     lazy: true,
     langDir: 'locales/',
@@ -48,13 +60,20 @@ export default {
   },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    loaders: {
-      less: {
-        lessOptions: {
-          javascriptEnabled: true
-        }
-      }
+    extend(config, { isDev, isClient }) {
+      config.node = {
+        fs: 'empty'
+      };
 
+      loaders: {
+        less: {
+          lessOptions: {
+            javascriptEnabled: true
+          }
+        }
+
+      }
     }
+
   }
 }

@@ -1,17 +1,19 @@
 <template>
-  <div class="item">
+  <div class="item shadow">
     <a-row type="flex" justify="space-between">
       <a-col :md="{ span: logoCol }" :sm="{ span: 24 }">
-        <div class="avatar">
-          <img src="../assets/img/airbnb-logo.png" alt="" />
+        <div class="avatar-center">
+          <div class="avatar">
+            <img class="avatar-url" :src="item.company.avatarUrl" alt="" />
+          </div>
         </div>
       </a-col>
       <a-col :md="{ span: textCol }" :sm="{ span: 24 }">
         <div class="item__company">
-          <h1>Google</h1>
+          <h1>{{ item.title }}</h1>
         </div>
         <div class="item__title">
-          <p>Full Stack Developer</p>
+          <p>{{ item.company.title }}</p>
         </div>
         <div class="item__tags mb-2">
           <div>
@@ -33,12 +35,24 @@
       <a-col :md="{ span: buttonCol }" :sm="{ span: 24 }">
         <div class="buttons-block">
           <div class="flex justify-end">
-            <a-button>
+            <a-button @click="openMessage">
               <a-icon type="heart" />
             </a-button>
           </div>
           <div class="flex justify-end mt-2">
-            <a-button type="primary"> {{ $t("buttons.readMore") }} </a-button>
+            <nuxt-link class="h-100" :to="'/jobs/' + item._id">
+              <a
+                class="
+                  root-0-2-45
+                  animation-0-2-46
+                  weightMedium-0-2-60
+                  sizeMd-0-2-50
+                  variantAccent-0-2-55
+                "
+                href="/spotlights/sweeft"
+                >{{ $t("buttons.readMore") }}</a
+              >
+            </nuxt-link>
           </div>
         </div>
       </a-col>
@@ -47,9 +61,11 @@
 </template>
 
 <script>
+import { message } from "ant-design-vue";
+
 export default {
   name: "JobListItem",
-  props: ["activeView"],
+  props: ["activeView", "item"],
   data: function () {
     return {
       logoCol: 3,
@@ -57,8 +73,15 @@ export default {
       buttonCol: 4,
     };
   },
-  created() {
-    console.log(this.logoCol);
+  methods: {
+    openMessage() {
+      const key = "updatable";
+
+      message.loading({ content: "Loading...", key });
+      setTimeout(() => {
+        message.success({ content: "Added to favourites !", key, duration: 2 });
+      }, 1000);
+    },
   },
   watch: {
     activeView: function (newVal, oldValue) {
@@ -79,6 +102,10 @@ export default {
 </script>
 
 <style>
+.avatar-center {
+  padding-bottom: 20px;
+}
+
 .buttons-block {
   display: flex;
   flex-direction: column;
@@ -89,7 +116,7 @@ export default {
 .item {
   background-color: white;
   border-radius: 8px;
-  padding: 15px;
+  padding: 25px;
 }
 
 .dot {
@@ -100,5 +127,16 @@ export default {
   display: inline-block;
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.avatar {
+  width: 55px;
+  height: 55px;
+}
+
+.avatar-url {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
 }
 </style>

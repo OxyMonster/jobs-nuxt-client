@@ -16,7 +16,7 @@
 
 @media (max-width: 768px) {
     .flex {
-      flex-wrap: wrap;
+        flex-wrap: wrap;
     }
 }
 
@@ -41,7 +41,7 @@
     padding: 0 !important;
 }
 
-.m-0  {
+.m-0 {
     margin: 0 !important;
 }
 
@@ -108,39 +108,99 @@
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-  }
-  @media (min-width: 768px) {
+}
+
+@media (min-width: 768px) {
     .container {
-      width: 750px;
+        width: 750px;
     }
-  }
-  @media (min-width: 992px) {
+}
+
+@media (min-width: 992px) {
     .container {
-      width: 970px;
+        width: 970px;
     }
-  }
-  @media (min-width: 1200px) {
+}
+
+@media (min-width: 1200px) {
     .container {
-      width: 1170px;
+        width: 1170px;
     }
-  }
-  
-  .container-fluid {
+}
+
+.container-fluid {
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-  }
-
-  
-  body {
-    filter: blur(111);
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-family: "BPG Mrgvlovani", sans-serif;
-    background-color: #EDF1F6;
-
-  }
+}
 
 
+html {
+    overflow: overlay;
+}
 
+body {
+    font-family: "BPG Mrgvlovani", sans-serif !important;
+    background-color: #fdfdfd;
+    font-display: swap;
+
+}
+
+/* Button */
+.root-0-2-45 {
+    border: 0px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.root-0-2-45:hover,
+.root-0-2-45:focus {
+    outline: none;
+    text-decoration: none;
+}
+
+.animation-0-2-46 {
+    transition: all 0.3s ease 0s;
+}
+
+.sizeMd-0-2-50 {
+    padding: 0.875rem 1.75rem;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.variantAccent-0-2-55 {
+    color: rgb(255, 255, 255);
+    background-color: #1890ff;
+}
+
+.variantAccent-0-2-55:hover {
+    color: rgb(255, 255, 255);
+    background-color: #40a9ff;
+}
+
+.variantAccent-0-2-55:focus {
+    box-shadow: #40a9ff;
+}
+
+.variantAccent-0-2-55:active {
+    box-shadow: unset;
+    background-color: #096dd9;
+}
+
+.page-enter-active,
+.page-leave-active {
+    transition: opacity .3s;
+    /* transition: .4s; */
+}
+
+
+
+.page-enter,
+.page-leave-to {
+    opacity: 0;
+}
